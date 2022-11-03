@@ -53,6 +53,10 @@
       nav a {
         padding-right: 15px;
       }
+      h2,
+      h3 {
+        padding: 15px 0px 10px;
+      }
       .main {
         padding-top: 25%;
         padding-bottom: 15px;
@@ -69,13 +73,53 @@
         font-size: 20px;
         text-shadow: 1px 1px black;
       }
+      .info {
+        font-family: "Alike", serif;
+      }
+      .info h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+      .info h2::first-letter {
+        color: #f19a02;
+      }
+      .info h3 {
+        text-align: center;
+      }
+      .info a {
+        padding: 10px 20px;
+        color: black;
+        text-decoration: none;
+        background-color: #ffad20;
+        border-radius: 20px;
+      }
+      .landmark-pic {
+        align-items: center;
+      }
+      .pop-info {
+        background-color: black;
+        color: white;
+        font-family: "Alike", serif;
+        text-align: center;
+      }
+      .pop-info h1 {
+        font-size: 60px;
+        text-align: center !important;
+      }
+      .pop-info button {
+        background-color: white;
+        color: black;
+      }
+      .pop-info a h2 {
+        color: red;
+      }
     </style>
     <div class="pop-boom" id="boom"></div>
     <div class="modal" tabindex="-1" id="pop-info">
       <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
+        <div class="modal-content pop-info">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h1 class="modal-title">Error 404</h1>
             <button
               type="button"
               class="btn-close"
@@ -85,7 +129,13 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <h2>My hometown is getting ruined by Russian missles</h2>
+            <p>
+              Due to Russian invation Kyiv and it`s regions suffer from constant
+              attacks. Russian bombs fall on our homes, our families. They try
+              to destroy our history and our future
+            </p>
+            <a><h2>Help us fight! Donate Now!</h2></a>
           </div>
         </div>
       </div>
@@ -95,7 +145,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Main</a>
           <a class="navbar-brand" href="#history">History</a>
-          <a class="navbar-brand" href="#">Landmarks</a>
+          <a class="navbar-brand" href="#landmark">Landmarks</a>
         </div>
       </nav>
       <div class="container main">
@@ -109,17 +159,17 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container info">
       <div class="row" id="history">
         <h2>History</h2>
-        <div class="col">
+        <div class="col-5">
           <img
             src="https://static.ukrinform.com/photos/2018_05/1527447739-7845.jpg"
             alt="Landmark of Kyi,Schek, Khoryv and Lybed"
             class="img-fluid"
           />
         </div>
-        <div class="col">
+        <div class="col-7">
           <h3>The legend</h3>
           <p>
             According to the ancient legend, Kiev, the capital of Ukraine, was
@@ -128,6 +178,15 @@
             city was named after the eldest brother Kyi. Kyiv means the city of
             Kyi.
           </p>
+          <h3>And then...</h3>
+          <p>
+            In 1240 it was destroyed by the Mongols of the Golden Horde. After
+            being rebuilt, it came under Lithuanian, Polish, and Cossack rule.
+            It was incorporated into Russia in 1793, and in 1934 Kyiv became the
+            capital of the Ukrainian Soviet Socialist Republic. It became
+            Ukraine’s national capital after the country achieved its
+            independence in 1991.
+          </p>
           <a
             href="http://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CY%5CKyiv.htm"
             >Learn more</a
@@ -135,15 +194,56 @@
         </div>
       </div>
       <h2>Landmarks</h2>
-      <div class="row" id="landmark">
-        <div class="col">
-          <img src="" alt="" />
+      <div class="row landmark-pic" id="landmark">
+        <div class="col-4">
+          <img
+            src="https://youimg1.tripcdn.com/target/01063120008j974gj8B10.jpg?proc=source%2Ftrip"
+            alt="Golden Gate of Kiev"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            src="https://gordonua.com/img/article/15242/7_big.jpg"
+            alt="Motherland of Kiev"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-4">
+          <img
+            src="https://www.ukraine-is.com/wp-content/uploads/2017/01/IMG_1397_sandm_SofPL_SM.jpg"
+            alt="St Sophia's Cathedral"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
           <h3>Golden Gate</h3>
-          <p></p>
+          <p>
+            For several centuries this building had not only defense functions,
+            but it was a symbol of the power and independence of Kievan Rus as
+            the state and Kiev as its capital.
+          </p>
+        </div>
+        <div class="col-4">
+          <h3>Motherland</h3>
+          <p>
+            The sculpture is a part of the National Museum of the History of
+            Ukraine in the Second World War and symbolizes the feat accomplished
+            by people during the war.
+          </p>
+        </div>
+        <div class="col-4">
+          <h3>St Sophia's Cathedral</h3>
+          <p>
+            It was a centre of learning and culture, housing the first school
+            and library in Kyivan Rus.
+          </p>
         </div>
       </div>
     </div>
-    <!-- <script>
+    <script>
       let popUp = document.getElementById("boom");
       let info = document.getElementById("pop-info");
       function showPopUp() {
@@ -152,11 +252,11 @@
           popUp.style.display = "none";
           info.style.display = "block";
         }
-        setTimeout(hidePopUp, 60);
+        setTimeout(hidePopUp, 3000);
       }
-      setTimeout(showPopUp, 1000);
+      setTimeout(showPopUp, 20000);
       let button = document.getElementById("close");
       button.addEventListener("click", () => (info.style.display = "none"));
-    </script> -->
+    </script>
   </body>
 </html>
