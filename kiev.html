@@ -5,21 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My hometown - Kiev</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
-      <div class="hidden"></div>
-      <nav></nav>
-      <div class="main">
-        <h1>Kiev</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quo
-          placeat maiores minima odit natus fuga voluptate recusandae excepturi
-          possimus quaerat laboriosam, nihil tenetur cupiditate laborum iure
-          asperiores magni. Eveniet.
-        </p>
-        <button></button>
+    <style>
+      body {
+        background-image: url(https://i.pinimg.com/originals/9e/a7/ea/9ea7ea383243456d8a86b2cd92c8aff9.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      .pop-boom {
+        background-image: url(https://github.com/jessekorzan/expodal/blob/master/assets/img/explode.gif?raw=true);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+      }
+    </style>
+    <div class="pop-boom" id="boom"></div>
+    <div class="modal" tabindex="-1" id="pop-info">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="container main">
+      <div class="main">
+        <nav></nav>
+        <div>
+          <h1 class="city">Kiev</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quo
+            placeat maiores minima odit natus fuga voluptate recusandae
+            excepturi possimus quaerat laboriosam, nihil tenetur cupiditate
+            laborum iure asperiores magni. Eveniet.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let popUp = document.getElementById("boom");
+      let info = document.getElementById("pop-info");
+      function showPopUp() {
+        popUp.style.display = "block";
+        function hidePopUp() {
+          popUp.style.display = "none";
+          info.style.display = "block";
+        }
+        setTimeout(hidePopUp, 60);
+      }
+      setTimeout(showPopUp, 1000);
+      let button = document.getElementById("close");
+      button.addEventListener("click", () => (info.style.display = "none"));
+    </script>
   </body>
 </html>
