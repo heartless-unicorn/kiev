@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My hometown - Kiev</title>
 
-    <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Alike&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
@@ -23,10 +27,11 @@
   </head>
   <body>
     <style>
-      body {
+      .hero {
         background-image: url(https://i.pinimg.com/originals/9e/a7/ea/9ea7ea383243456d8a86b2cd92c8aff9.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
+        color: white;
       }
       .pop-boom {
         background-image: url(https://github.com/jessekorzan/expodal/blob/master/assets/img/explode.gif?raw=true);
@@ -36,6 +41,33 @@
         height: 100%;
         position: absolute;
         display: none;
+      }
+      nav {
+        padding: 10px 10px;
+        font-family: "Alike", serif;
+        text-align: center;
+
+        text-transform: capitalize;
+        background-color: rgba(16, 63, 109, 0.3);
+      }
+      nav a {
+        padding-right: 15px;
+      }
+      .main {
+        padding-top: 25%;
+        padding-bottom: 15px;
+      }
+      .main h1 {
+        text-transform: capitalize;
+        font-family: "Alex Brush", cursive;
+        font-size: 160px;
+      }
+      .main p {
+        font-family: "Alike", serif;
+        text-align: left;
+        padding: 5px 20px;
+        font-size: 20px;
+        text-shadow: 1px 1px black;
       }
     </style>
     <div class="pop-boom" id="boom"></div>
@@ -58,21 +90,60 @@
         </div>
       </div>
     </div>
-    <div class="container main">
-      <div class="main">
-        <nav></nav>
+    <div class="hero">
+      <nav>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Main</a>
+          <a class="navbar-brand" href="#history">History</a>
+          <a class="navbar-brand" href="#">Landmarks</a>
+        </div>
+      </nav>
+      <div class="container main">
         <div>
-          <h1 class="city">Kiev</h1>
+          <h1 class="city">Kyiv</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quo
-            placeat maiores minima odit natus fuga voluptate recusandae
-            excepturi possimus quaerat laboriosam, nihil tenetur cupiditate
-            laborum iure asperiores magni. Eveniet.
+            Kyiv - the capital of strong and independant Ukraine.. As the centre
+            of Kyivan Rus, the first eastern Slavic state, 1,000 years ago, it
+            acquired the title “Mother of Rus Cities.”
           </p>
         </div>
       </div>
     </div>
-    <script>
+    <div class="container">
+      <div class="row" id="history">
+        <h2>History</h2>
+        <div class="col">
+          <img
+            src="https://static.ukrinform.com/photos/2018_05/1527447739-7845.jpg"
+            alt="Landmark of Kyi,Schek, Khoryv and Lybed"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col">
+          <h3>The legend</h3>
+          <p>
+            According to the ancient legend, Kiev, the capital of Ukraine, was
+            founded by three brothers, Kyi, Schek and Khoryv, and their sister
+            Lybed, at the end of the 5th-beginning of the 6th centuries. The
+            city was named after the eldest brother Kyi. Kyiv means the city of
+            Kyi.
+          </p>
+          <a
+            href="http://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CY%5CKyiv.htm"
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <h2>Landmarks</h2>
+      <div class="row" id="landmark">
+        <div class="col">
+          <img src="" alt="" />
+          <h3>Golden Gate</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
       let popUp = document.getElementById("boom");
       let info = document.getElementById("pop-info");
       function showPopUp() {
@@ -86,6 +157,6 @@
       setTimeout(showPopUp, 1000);
       let button = document.getElementById("close");
       button.addEventListener("click", () => (info.style.display = "none"));
-    </script>
+    </script> -->
   </body>
 </html>
