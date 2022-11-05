@@ -110,8 +110,42 @@
         background-color: white;
         color: black;
       }
-      .pop-info a h2 {
+      .pop-info a {
         color: red;
+        text-decoration: none;
+      }
+
+      @media (max-width: 830px) {
+        .main {
+          padding-top: 20%;
+        }
+        .main h1 {
+          font-size: 70px;
+        }
+        .main p {
+          font-size: 10px;
+        }
+        .info p {
+          font-size: 10px;
+        }
+        .info h2,
+        h3 {
+          font-size: 20px;
+        }
+        .info a {
+          font-size: 10px;
+        }
+      }
+      @media (max-width: 400px) {
+        .main {
+          padding-top: 18%;
+        }
+        .main h1 {
+          font-size: 50px;
+        }
+        .main p {
+          font-size: 8px;
+        }
       }
     </style>
     <div class="pop-boom" id="boom"></div>
@@ -135,7 +169,9 @@
               attacks. Russian bombs fall on our homes, our families. They try
               to destroy our history and our future
             </p>
-            <a><h2>Help us fight! Donate Now!</h2></a>
+            <a href="https://prytulafoundation.org/" target="_blank"
+              ><h2>Help us fight! Donate Now!</h2></a
+            >
           </div>
         </div>
       </div>
@@ -162,14 +198,14 @@
     <div class="container info">
       <div class="row" id="history">
         <h2>History</h2>
-        <div class="col-5">
+        <div class="col-sm-5">
           <img
             src="https://static.ukrinform.com/photos/2018_05/1527447739-7845.jpg"
             alt="Landmark of Kyi,Schek, Khoryv and Lybed"
             class="img-fluid"
           />
         </div>
-        <div class="col-7">
+        <div class="col-sm-7">
           <h3>The legend</h3>
           <p>
             According to the ancient legend, Kiev, the capital of Ukraine, was
@@ -195,21 +231,21 @@
       </div>
       <h2>Landmarks</h2>
       <div class="row landmark-pic" id="landmark">
-        <div class="col-4">
+        <div class="col-sm-4">
           <img
             src="https://youimg1.tripcdn.com/target/01063120008j974gj8B10.jpg?proc=source%2Ftrip"
             alt="Golden Gate of Kiev"
             class="img-fluid"
           />
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
           <img
             src="https://gordonua.com/img/article/15242/7_big.jpg"
             alt="Motherland of Kiev"
             class="img-fluid"
           />
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
           <img
             src="https://www.ukraine-is.com/wp-content/uploads/2017/01/IMG_1397_sandm_SofPL_SM.jpg"
             alt="St Sophia's Cathedral"
@@ -218,7 +254,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-4">
+        <div class="col-sm-4">
           <h3>Golden Gate</h3>
           <p>
             For several centuries this building had not only defense functions,
@@ -226,7 +262,7 @@
             the state and Kiev as its capital.
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
           <h3>Motherland</h3>
           <p>
             The sculpture is a part of the National Museum of the History of
@@ -234,7 +270,7 @@
             by people during the war.
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4">
           <h3>St Sophia's Cathedral</h3>
           <p>
             It was a centre of learning and culture, housing the first school
